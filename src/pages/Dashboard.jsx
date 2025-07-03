@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import StockCard from '../components/StockCard';
-import { fetchStock } from '../utils/fetchStock';
+import { fetchStock } from '../utils/fetchstock';
 
 // Loader Component
 const Loader = () => (
