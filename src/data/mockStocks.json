@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Apple Inc.",
+    "ticker": "AAPL",
+    "currentPrice": 187.25,
+    "priceHistory": [180, 182, 185, 186, 187.25]
+  },
+  {
+    "name": "Tesla Inc.",
+    "ticker": "TSLA",
+    "currentPrice": 239.5,
+    "priceHistory": [245, 243, 240, 238, 239.5]
+  },
+  {
+    "name": "Microsoft Corp.",
+    "ticker": "MSFT",
+    "currentPrice": 341.17,
+    "priceHistory": [332, 335, 337, 339, 341.17]
+  }
+]
