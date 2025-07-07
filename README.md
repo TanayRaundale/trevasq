@@ -10,7 +10,7 @@ Deployed on Vercel: https://trevasq.vercel.app
 Features:
 - Real-time stock updates every 10 seconds (free-tier safe)
 - Sort by top gainers or losers
-- Dark mode toggle with persistence
+- Dark mode based on system 
 - Search bar to add tickers dynamically
 - Historical price chart using sparklines
 - Responsive, fast, and mobile-friendly UI
@@ -32,9 +32,7 @@ Setup Instructions:
 2. Install dependencies
    npm install
 
-3. Add environment variable
-   Create a .env file with:
-   VITE_API_KEY=your_twelvedata_api_key_here
+3. Get your VITE_API_KEY=your_twelvedata_api_key_here
 
 4. Run the app locally
    npm run dev
@@ -56,9 +54,9 @@ Screenshots:
 (Optional: Include screenshots of dark mode, charts, mobile view)
 
 Contributing / Feedback:
-This project was built under constraints — suggestions, forks, or contributions are welcome! Reach out on LinkedIn: https://www.linkedin.com/in/tanayraundale or raise a GitHub issue.
+This project was built under constraints — suggestions, forks, or contributions are welcome! Reach out on LinkedIn: 
+linkedin.com/in/tanay-raundale-726086303/ or raise a GitHub issue.
 
-License:
-MIT — feel free to use, remix, and build upon it.
+
 
 Made with ❤️ by Tanay Raundale (https://github.com/TanayRaundale)
