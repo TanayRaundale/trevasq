@@ -1,32 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import StockCard from '../components/StockCard';
 import { fetchStock } from '../utils/fetchstock';
-
+import Loader from '../components/Loader';
+import Logo from '../components/Logo'
 // Loader Component
-const Loader = () => (
-  <div className="flex flex-col items-center justify-center py-24">
-    <svg className="animate-spin h-12 w-12 text-blue-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
-    </svg>
-    <span className="text-lg text-blue-600 font-semibold tracking-wide">Loading stocks...</span>
-  </div>
-);
+
+
 
 // Logo Component (SVG)
-const Logo = () => (
-  <div className="flex items-center gap-3">
-    <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
-      <rect x="4" y="24" width="8" height="20" rx="2" fill="#2563eb"/>
-      <rect x="16" y="16" width="8" height="28" rx="2" fill="#38bdf8"/>
-      <rect x="28" y="8" width="8" height="36" rx="2" fill="#fbbf24"/>
-      <rect x="40" y="2" width="8" height="42" rx="2" fill="#22c55e"/>
-    </svg>
-    <span className="text-3xl font-bold bg-gradient-to-r from-blue-700 via-blue-400 to-yellow-400 bg-clip-text text-transparent tracking-tight">
-     S&amp;P 500
-    </span>
-  </div>
-);
+
 
 const Dashboard = () => {
   const [stocks, setStocks] = useState([]);
@@ -166,12 +148,27 @@ const Dashboard = () => {
         {loading ? (
           <Loader />
         ) : sortedStocks.length === 0 ? (
-          <div className="flex flex-col items-center mt-16">
-            <svg className="h-16 w-16 text-blue-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 01.88-7.9A5.5 5.5 0 1119 13h-1" />
-            </svg>
-            <p className="text-center text-gray-500 dark:text-gray-400 text-lg">No stocks to display. Try searching for a ticker.</p>
-          </div>
+          <div className="flex flex-col items-center justify-center min-h-[300px] gap-4 text-center">
+  <svg
+    className="h-20 w-20 text-blue-400 dark:text-blue-500 animate-bounce"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M3 15a4 4 0 01.88-7.9A5.5 5.5 0 1119 13h-1"
+    />
+  </svg>
+  <p className="text-lg font-semibold text-gray-600 dark:text-gray-300">
+    No stocks to display
+  </p>
+  <p className="text-sm text-gray-500 dark:text-gray-400">
+    Try searching for a stock ticker (e.g., <span className="font-medium text-blue-600">AAPL</span>, <span className="font-medium text-blue-600">TSLA</span>)
+  </p>
+</div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedStocks.map((stock, index) => (

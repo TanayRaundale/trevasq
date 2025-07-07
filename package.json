@@ -14,7 +14,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-sparklines": "^1.7.0",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "yahoo-finance2": "^2.13.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
